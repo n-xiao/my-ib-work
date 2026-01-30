@@ -1,0 +1,23 @@
+// taken from JavaFX installation guide, following its instructions: https://openjfx.io/openjfx-docs/
+
+plugins {
+  id 'application'
+  id 'org.openjfx.javafxplugin' version '0.1.0'
+}
+
+dependencies {
+    implementation 'org.json:json:20250107'
+}
+
+repositories {
+    mavenCentral()
+}
+
+javafx {
+    version = "21"
+    modules = [ 'javafx.controls', 'javafx.fxml','javafx.web' ]
+}
+
+application {
+    mainClass = 'org.openjfx.MainApp'
+}

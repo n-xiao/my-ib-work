@@ -1,0 +1,119 @@
+#args-container {
+    z-index: 5;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    height: 100%;
+    background-color: transparent;
+    position: absolute;
+    display: flex;
+    gap: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+/*adapted from chatgpt*/
+#args-container::-webkit-scrollbar {
+    display: none;
+}
+
+.arg-box {
+    z-index: 6;
+    will-change: contents;
+    width: fit-content;
+    height: 80%;
+    position: relative;
+    display: flex;
+    background-color: transparent;
+    border: 2px solid rgb(68, 54, 160);
+    border-radius: 2px;
+    gap: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arg-name-container {
+    z-index: 7;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: rgb(53, 29, 77);
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: fit-content;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arg-name {
+    z-index: inherit;
+    display: flex;
+    position: relative;
+    height: fit-content;
+    text-align: left;
+    font-family: 'Montserrat', system-ui;
+    font-style: normal;
+    font-weight: 700;
+    color: rgb(205, 192, 255);
+    font-size: 10px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.arg-input {
+    z-index: 7;
+    width: 20px;
+    position: relative;
+    height: 98%;
+    background: none;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: left;
+    border: none;
+    outline: none;
+}
+
+#arg-hint-container {
+    position: absolute;
+    display: flex;
+    width: 85%;
+    height: 16px;
+    padding: 3px;
+    background-color: rgb(16, 15, 90);
+}
+
+#arg-hint-title {
+    position: absolute;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    right: 11px;
+    font-family: 'Montserrat', system-ui;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    color: rgb(202, 202, 202);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#arg-hint-body {
+    position: absolute;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    left: 11px;
+    font-family: 'Montserrat', system-ui;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    color: whitesmoke;
+    top: 50%;
+    transform: translateY(-50%);
+}
